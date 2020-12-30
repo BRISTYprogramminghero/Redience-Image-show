@@ -118,10 +118,13 @@ button{
         margin: 0;
         box-sizing: border-box;
     }
+    html {
+        overflow: hidden;
+    }
     body {
-        width: 100%;
-        height: 100vh;
-        display: inline;
+        width: 100% !important;
+        height: 70% !important;
+        display: block;
         position: cover;
         overflow-x: hidden;
     }
@@ -136,20 +139,31 @@ button{
         width: 100%;
         height: 100vh;
         background-size: cover;
-        background-position: center;
-        position: relative;
+    }
+    .navbar .logo{
+        width: 60px;
+        margin: 40px 0;
+        cursor: pointer;
+    }
+    button{
+        padding: 10px 25px;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
     }
     .info h1{
-        font-size: 20px;
-        letter-spacing: 10px;
+        font-size: 40px;
+        letter-spacing: 20px;
     }
     .container{
-        width: 50%;
+        width: 50% !important;
         height: 100vh;
         position: cover;
     }
     .info{
-        width: 200px;
+        width: 350px;
+        color: white;
         position: absolute;
         right: 0;
         top: 50%;
@@ -165,13 +179,120 @@ button{
         bottom: 50px;   
        }
        #prev, #next{
-        width: 2%; 
+        width: 5%; 
+
     }
+
     .preview img{
         width: 40px;
         margin: 0 5px;
         opacity: 0.4;
     }
-
+    .info p{
+        margin: 10px 0;
+        line-height: 25px;
+        font-size: 12px;
     
+    }
+    .preview .active{
+         width: 60px;
+         opacity: 100%;
+     }
 }
+
+
+
+
+
+@media screen and (max-width: 600px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html {
+        overflow: hidden;
+    }
+    body {
+        width: 100% !important;
+        height: 70% !important;
+        display: block;
+        position: cover;
+        overflow-x: hidden;
+    }
+    .hidden-thing {
+        position: fixed;
+        left: 70%;
+        width: 20px;
+        height: 50px;
+        opacity: 0;
+      }
+    #hero{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
+    .navbar .logo{
+        width: 40px;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+    button{
+        padding: 8px 15px;
+        color: white;
+        font-size: 9px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .info h1{
+        font-size: 15px;
+        letter-spacing: 10px;
+    }
+    .container{
+        width: 50% !important;
+        height: 100vh;
+        position: cover;
+    }
+    .info{
+        width: 150px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    
+    }
+    .slider{
+        display: fixed;
+        width: 100vh;
+        align-items: center;
+        position: absolute;
+        right: -100px;
+        bottom: 50px;   
+       }
+       #prev, #next{
+        width: 5%; 
+
+    }
+    .preview{
+        align-items: center !important;
+        padding-left: 0% !important;
+        padding-right: 1px !important;
+        gap: 1px !important;
+        margin: 0% !important;
+    }
+    .preview img{
+        width: 15px;
+        margin: 0 5px;
+        opacity: 0.4;
+    }
+    .info p{
+        margin: 10px 0;
+        line-height: 15px;
+    
+    }
+    .preview .active{
+         width: 40px;
+         opacity: 100%;
+     }
+}
+
